@@ -2,6 +2,7 @@ class MyNavBar extends HTMLElement {
     constructor() {
         super();
         const shadowRoot = this.attachShadow({ mode: 'open' });
+        const imgSrc = this.getAttribute('imgSrc');
         const myNavbar = document.createElement('my-navbar');
         myNavbar.innerHTML = `
         <style>
@@ -10,6 +11,11 @@ class MyNavBar extends HTMLElement {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+            }
+
+            img {
+              height: 100px;
+              width: 100px;
             }
             ul {
                 list-style-type: none;
@@ -22,7 +28,7 @@ class MyNavBar extends HTMLElement {
                }
             </style>
     <ul>
-      <li><a href='../index.html'>Home</a></li>
+      <li><a href='../index.html'><img src="${imgSrc}" alt="Logo" class="logo"></a></li>
       <li>
         <a href="../projects/projects.html">My Projects</a>
       </li>
