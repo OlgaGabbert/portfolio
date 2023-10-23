@@ -4,6 +4,7 @@ class MyNavBar extends HTMLElement {
         const shadowRoot = this.attachShadow({ mode: 'open' });
         const imgSrc = this.getAttribute('imgSrc');
         const myNavbar = document.createElement('my-navbar');
+        const link = this.getAttribute('link') || "#";
         myNavbar.innerHTML = `
         <style>
             my-navbar {
@@ -32,7 +33,7 @@ class MyNavBar extends HTMLElement {
       <li>
         <a href="../projects/projects.html">My Projects</a>
       </li>
-      <li><a href="./contact/contact.html">Contact</a></li>
+      <li><a href="${link}">Contact</a></li>
     </ul>
         `;
         shadowRoot.appendChild(myNavbar);
