@@ -1,17 +1,23 @@
 # Olga Gabbert's Portfolio
 
-Welcome to my portfolio page! This is where I'll showcase my projects and share my work with you. While there may not be any projects here just yet, stay tuned because I'll be adding them soon.
+Welcome to my portfolio page! You can view the deployed version of this portfolio [here](https://olgagabbert.github.io/portfolio/).
+
+## About
+
+This portfolio is a work in progress, primarily aimed at practicing the use of custom HTML elements with JavaScript. While it's a bit light on content right now, it will soon showcase a collection of my projects, demonstrating my skills and expertise in various areas.
+
+## Portfolio Contents
+
+At the moment, this portfolio is under development, and I'm actively working on adding my projects. Stay tuned for updates and more details about my work. I'm excited to share my experiences and creations with you!
 
 ## Technologies Used
 
-I've built this portfolio using HTML, CSS AND custom HTML and JavaScript to create a unique and personalized experience.
+- HTML
+- CSS
+- JavaScript
 
-## What to Expect
+## Feedback
 
-- You can expect to see a collection of my past and current projects.
-- Each project will have its own dedicated page with details and information.
-- I'll be adding more content and making regular updates, so be sure to check back often.
+Your feedback and suggestions are highly appreciated. If you have any ideas, questions, or recommendations for this portfolio, please feel free to reach out to me. You can contact me through the "Contact Me" section on the portfolio.
 
-Feel free to get in touch with me if you have any questions.
-
-\-- Olga Gabbert
+Thank you for visiting, and I look forward to sharing my projects and experiences with you soon!
