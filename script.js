@@ -36,7 +36,7 @@ class MyNavBar extends HTMLElement {
           <ul>
             <li><a href='${linkSrc}'><img src="${imgSrc}" alt="Logo" class="logo"></a></li>
             <li>
-              <a href="../projects/projects.html">My Projects</a>
+              <a href="./projects/projects.html">My Projects</a>
             </li>
             <li><a href="${link}">Contact</a></li>
           </ul>
@@ -72,8 +72,12 @@ class MyProjects extends HTMLElement {
         text-align: center;
         background-color: #fff;
         margin: 20px;
-        max-width: 200px;
         transition: transform 0.3s;
+        width: 200px; 
+        height: 300px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .project-card img {
@@ -81,6 +85,13 @@ class MyProjects extends HTMLElement {
         height: auto;
         border-radius: 5px;
     }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+  }
 
     .project-card h3 {
         font-size: 1.5rem;
@@ -120,23 +131,28 @@ class MyProjects extends HTMLElement {
 </style>
 
 <div class="project-card">
-    <img src="project-image1.jpg" alt="Project Name">
-    <h3>Project 1: Project Name</h3>
+  <div class="card-content">
+    <img src="JokesProject.png" alt="Jokes project">
+    <h3>Jokes from APIs</h3>
     <p>Description of Project 1.</p>
-    <a href="project1.html">Learn more</a>
+    <a href="project1/project1.html">Learn more</a>
+  </div>
 </div>
-
 <div class="project-card">
-    <img src="project-image2.jpg" alt="Project Name">
-    <h3>Project 2: Project Name</h3>
+  <div class="card-content">
+    <img src="To-doProject.png" alt="To-do-app">
+    <h3>To-do-App</h3>
     <p>Description of Project 2.</p>
-    <a href="project2.html">Learn more</a>
+    <a href="project2/project2.html">Learn more</a>
+  </div>
 </div>
 <div class="project-card">
-    <img src="project-image3.jpg" alt="Project Name">
-    <h3>Project 3: Project Name</h3>
+  <div class="card-content">
+    <img src="JokesProject.png" alt="Project Name">
+    <h3>Project 3</h3>
     <p>Description of Project 3.</p>
-    <a href="project3.html">Learn more</a>
+    <a href="project3/project3.html">Learn more</a>
+    </div>
 </div>
         `;
         shadowRoot.appendChild(myProjects);
