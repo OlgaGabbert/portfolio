@@ -5,6 +5,7 @@ class MyNavBar extends HTMLElement {
       const imgSrc = this.getAttribute('imgSrc');
       const linkSrc = this.getAttribute('linkSrc') || "#";
       const link = this.getAttribute('link') || "#";
+      const projectsLink = this.getAttribute('projectsLink') || "#"
       
       shadowRoot.innerHTML = `
       <style>
@@ -15,7 +16,7 @@ class MyNavBar extends HTMLElement {
           position: fixed;
           top: 0;
           display: flex;
-          background: linear-gradient(135deg, #ffffff, #3498db);
+          background: linear-gradient(to bottom right, #5ab9e0, #1abc9c);
           margin-bottom: 90px;
         }
         .navbar img {
@@ -36,7 +37,7 @@ class MyNavBar extends HTMLElement {
           <ul>
             <li><a href='${linkSrc}'><img src="${imgSrc}" alt="Logo" class="logo"></a></li>
             <li>
-              <a href="./projects/projects.html">My Projects</a>
+              <a href="${projectsLink}">My Projects</a>
             </li>
             <li><a href="${link}">Contact</a></li>
           </ul>
@@ -170,8 +171,8 @@ class MyFooter extends HTMLElement {
         footer.innerHTML = `
         <style>
           footer {
-              background: linear-gradient(135deg, #ffffff, #3498db);
-              color: #000;
+            background: linear-gradient(to bottom right, #5ab9e0, #1abc9c);
+            color: #000;
               padding: 3px;
               text-align: center;
               font-size: 13px;
