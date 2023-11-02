@@ -165,6 +165,7 @@ customElements.define('my-projects', MyProjects);
 class MyFooter extends HTMLElement {
     constructor() {
         super();
+        const contactLink = this.getAttribute('contactLink') || "#"
         const shadowRoot = this.attachShadow({ mode: 'open' });
 
         const footer = document.createElement('footer');
@@ -185,7 +186,7 @@ class MyFooter extends HTMLElement {
         </style>
         <div>
           <p>&copy; 2023 Olga Gabbert</p>
-          <a href="./contact/contact.html">Contact me</a>
+          <a href="${contactLink}">Contact me</a>
         </div>
         `;
 
