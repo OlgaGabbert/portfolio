@@ -11,37 +11,27 @@
 
 <body>
     <div class="navbar">
-        <my-navbar imgSrc="../G.png"></my-navbar>
+        <my-navbar imgSrc="../G.png" projectsLink='projects.html'></my-navbar>
     </div>
 
     <div class='main-content'>
-
+        <div class='button-container'>
+            <button class="html-button">HTML</button>
+            <button class='react-button'>React</button>
+            <button class='express-button'>Express</button>
+        </div>
         <div class="carousel-container">
-            <div class="cards">
-                <div class="card">
-                    <button class="prev-button">&lt;</button>
-                    <h1>Card 1</h1>
-                    <button class="next-button">&gt;</button>
-                </div>
-                <div class="card">
-                    <button class="prev-button">&lt;</button>
-                    <h1>Card 2</h1>
-                    <button class="next-button">&gt;</button>
-                </div>
-                <div class="card">
-                    <button class="prev-button">&lt;</button>
-                    <h1>Card 3</h1>
-                    <button class="next-button">&gt;</button>
-                </div>
-            </div>
+            <button class="prev-button">&#9664;</button>
+            <div class="cards"></div>
+            <button class="next-button">&#9654;</button>
         </div>
     </div>
 
     <div class="footer">
         <my-footer></my-footer>
     </div>
-    <script src="../script.js"></script>
     <script src="./projects.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
