@@ -1,30 +1,30 @@
 const projects = [
     {
-        title: "Project 1",
+        title: "B",
         description: "This is the description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         technologiesUsed: ["HTML", "CSS", "JavaScript"],
         img: "project1.jpg",
     },
     {
-        title: "Project 2",
+        title: "A",
         description: "Project 2 is all about creating a mobile app for task management.",
         technologiesUsed: ["React", "Firebase"],
         img: "project2.jpg",
     },
     {
-        title: "Project 3",
+        title: "D",
         description: "A web application for online shopping with various categories of products.",
         technologiesUsed: ["Node.js", "Express", "MongoDB"],
         img: "project3.jpg",
     },
     {
-        title: "Project 4",
+        title: "C",
         description: "Developed a personal blog website using the MERN stack.",
         technologiesUsed: ["React", "Node.js", "MongoDB"],
         img: "project4.jpg",
     },
     {
-        title: "Project 5",
+        title: "Z",
         description: "A data visualization project using D3.js for displaying statistical data.",
         technologiesUsed: ["D3.js", "HTML", "CSS"],
         img: "project5.jpg",
@@ -38,6 +38,7 @@ const htmlButton = document.querySelector('.html-button');
 const reactButton = document.querySelector('.react-button');
 const expressButton = document.querySelector('.express-button');
 const carouselContainer = document.querySelector('.carousel-container');
+const sortButton = document.querySelector('.sort-button');
 let currentCardIndex = 0;
 
 function showCard(index) {
@@ -130,3 +131,20 @@ expressButton.addEventListener('click', () => {
     const expressProjects = filterTechnologie('Express');
     createFilteredCard(expressProjects);
 });
+
+sortButton.addEventListener('click', () => {
+    const sortedProjects = projects.sort((a, b) => {
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+      
+        if (titleA < titleB) {
+          return -1;
+        }
+        if (titleA > titleB) {
+          return 1;
+        }
+        return 0;
+      });
+      createFilteredCard(sortedProjects);
+});
+
