@@ -113,7 +113,7 @@ const createFilteredCard = projects => {
         setTimeout(() => {
             card.classList.remove('card-transition');
             card.style.opacity = 1;
-          }, 10);
+        }, 10);
     });
 }
 
@@ -133,18 +133,8 @@ expressButton.addEventListener('click', () => {
 });
 
 sortButton.addEventListener('click', () => {
-    const sortedProjects = projects.sort((a, b) => {
-        const titleA = a.title.toLowerCase();
-        const titleB = b.title.toLowerCase();
-      
-        if (titleA < titleB) {
-          return -1;
-        }
-        if (titleA > titleB) {
-          return 1;
-        }
-        return 0;
-      });
-      createFilteredCard(sortedProjects);
+    const sortedProjects = projects.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
+    createFilteredCard(sortedProjects);
 });
+
 

@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         alert('Form data saved to local storage!');
 
-        displayButton.style.display = 'flex';
+        displayButton.style.display = 'block';
 
         displayFormData();
     });
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload();
     };
 
-    displayButton.style.display = localStorage.getItem('formData') ? 'flex' : 'none';
+    displayButton.style.display = localStorage.getItem('formData') ? 'block' : 'none';
 
     if (displayButton) {
         displayButton.addEventListener('click', displayFormData);
